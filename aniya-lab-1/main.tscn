@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://j06r37ehae8c"]
+
+[ext_resource type="Texture2D" uid="uid://c0vyu8176a6ul" path="res://icon.svg" id="1_6lfnv"]
+[ext_resource type="Texture2D" uid="uid://dnrrse6u6brju" path="res://panda.png" id="2_gapst"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 4
+position = Vector2(100, 341)
+rotation = -0.31765
+texture = ExtResource("1_6lfnv")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(478, 163)
+texture = ExtResource("1_6lfnv")
+
+[node name="Panda" type="Sprite2D" parent="."]
+position = Vector2(835, 447)
+texture = ExtResource("2_gapst")
