@@ -1,9 +1,5 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjwneh426eodr"]
+[gd_scene format=3 uid="uid://ym6sggfw52ou"]
 
-[ext_resource type="Texture2D" uid="uid://iii7wvmiyjgg" path="res://ai-generated-an-animated-tree-with-green-leaves-and-grass-png.png" id="1_fm7re"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Tree" type="Node2D"]
-
-[node name="Ai-generated-an-animated-tree-with-green-leaves-and-grass-png" type="Sprite2D" parent="."]
-position = Vector2(267, 308)
-texture = ExtResource("1_fm7re")
+[node name="Sprite2D" type="Sprite2D" parent="."]

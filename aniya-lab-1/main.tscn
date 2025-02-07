@@ -1,20 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://j06r37ehae8c"]
+[gd_scene load_steps=4 format=3 uid="uid://nhuhyxd4316v"]
 
-[ext_resource type="Texture2D" uid="uid://c0vyu8176a6ul" path="res://icon.svg" id="1_6lfnv"]
-[ext_resource type="Texture2D" uid="uid://dnrrse6u6brju" path="res://panda.png" id="2_gapst"]
+[ext_resource type="Texture2D" uid="uid://db5ea2h2msyyl" path="res://panda.png" id="1_y7okm"]
+[ext_resource type="Texture2D" uid="uid://di8uq516su0jm" path="res://ai-generated-an-animated-tree-with-green-leaves-and-grass-png.png" id="2_rnqnx"]
+[ext_resource type="PackedScene" uid="uid://ym6sggfw52ou" path="res://tree.tscn" id="3_6v1fc"]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 4
-position = Vector2(100, 341)
-rotation = -0.31765
-texture = ExtResource("1_6lfnv")
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(478, 163)
-texture = ExtResource("1_6lfnv")
+[node name="Main" type="Node2D"]
 
 [node name="Panda" type="Sprite2D" parent="."]
-position = Vector2(835, 447)
-texture = ExtResource("2_gapst")
+position = Vector2(441, 527)
+rotation = -6.28319
+scale = Vector2(0.294357, 0.258876)
+texture = ExtResource("1_y7okm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(751, 576)
+scale = Vector2(0.3669, 0.322222)
+texture = ExtResource("1_y7okm")
+
+[node name="Ai-generated-an-animated-tree-with-green-leaves-and-grass-png" type="Sprite2D" parent="."]
+position = Vector2(557, 242)
+texture = ExtResource("2_rnqnx")
+
+[node name="tree" parent="." instance=ExtResource("3_6v1fc")]
+position = Vector2(284, 497)
+
+[node name="tree 2" parent="." instance=ExtResource("3_6v1fc")]
+position = Vector2(942, 175)
+
+[node name="tree 3" parent="." instance=ExtResource("3_6v1fc")]
+position = Vector2(127, 306)
+
+[node name="Ai-generated-an-animated-tree-with-green-leaves-and-grass-png2" type="Sprite2D" parent="."]
+position = Vector2(143, 450)
+texture = ExtResource("2_rnqnx")
+
+[node name="Ai-generated-an-animated-tree-with-green-leaves-and-grass-png3" type="Sprite2D" parent="."]
+position = Vector2(978, 352)
+texture = ExtResource("2_rnqnx")
