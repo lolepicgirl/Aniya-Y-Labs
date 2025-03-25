@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://by0af0d5x2oma"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8j7hv"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013373, 0.00532925)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0162514, -0.999868, 0.000682272, 0.998988, -0.0162657, -0.0419399, 0.0419454, 5.23353e-10, 0.99912, 0.0648343, 0.0809218, -0.996021)
+mesh = SubResource("BoxMesh_8j7hv")
