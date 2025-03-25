@@ -24,8 +24,10 @@ environment = SubResource("Environment_t3kx1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.5, -2.18557e-08, 0, -4.37114e-08, 1, -0.5, 0.866025, 3.78552e-08, -0.0484413, 0.0771309, -0.0304917)
-light_color = Color(0.863838, 0.531104, 0.889043, 1)
+light_color = Color(0.862745, 0.121569, 0.890196, 1)
+light_energy = 4.071
 shadow_enabled = true
+directional_shadow_split_1 = 0.211
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0291975, -0.474794, 0.879613, 0.998988, -0.0162657, -0.0419399, 0.0342203, 0.879947, 0.473838, -0.0604155, 0.31014, -0.792278)
