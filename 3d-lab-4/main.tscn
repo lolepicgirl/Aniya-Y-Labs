@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://by0af0d5x2oma"]
+[gd_scene load_steps=9 format=3 uid="uid://by0af0d5x2oma"]
+
+[ext_resource type="Script" path="res://character_body_3d.gd" id="1_48eui"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n8rqf"]
 sky_top_color = Color(0.124966, 0.488919, 0.798747, 1)
@@ -15,6 +17,14 @@ sky = SubResource("Sky_1j5bn")
 tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_8j7hv"]
+size = Vector3(5, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrc13"]
+albedo_color = Color(0.492538, 0.954127, 0.853019, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pr7td"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drd1b"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013373, 0.00532925)
@@ -23,15 +33,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013373, 0.00532925)
 environment = SubResource("Environment_t3kx1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.5, -2.18557e-08, 0, -4.37114e-08, 1, -0.5, 0.866025, 3.78552e-08, -0.0484413, 0.0771309, -0.0304917)
+transform = Transform3D(-0.866025, -0.5, -2.18557e-08, 0, -4.37114e-08, 1, -0.5, 0.866025, 3.78552e-08, -0.103991, 1.64188, 0.680669)
 light_color = Color(0.862745, 0.121569, 0.890196, 1)
 light_energy = 4.071
 shadow_enabled = true
 directional_shadow_split_1 = 0.211
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0291975, -0.474794, 0.879613, 0.998988, -0.0162657, -0.0419399, 0.0342203, 0.879947, 0.473838, -0.0604155, 0.31014, -0.792278)
+transform = Transform3D(0.0291975, -0.474794, 0.879613, 0.998988, -0.0162657, -0.0419399, 0.0342203, 0.879947, 0.473838, 1.13945, 2.70873, -0.16202)
 mesh = SubResource("BoxMesh_8j7hv")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.433342, -0.335972, 1.15889)
+transform = Transform3D(-0.987234, 0, 0.159278, 0, 1, 0, -0.159278, 0, -0.987234, -0.706989, 1.18287, -4.03628)
+fov = 69.4406
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.284159, 0.124104, 0.762923)
+use_collision = true
+size = Vector3(1000, 0.18, 1000)
+material = SubResource("StandardMaterial3D_yrc13")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_48eui")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62225, 1.09923, -2.19334)
+mesh = SubResource("CapsuleMesh_pr7td")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62225, 1.09923, -2.19334)
+shape = SubResource("CapsuleShape3D_drd1b")
